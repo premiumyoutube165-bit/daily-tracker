@@ -1,0 +1,17 @@
+{
+  "name": "performance-companion",
+  "version": "1.0.0",
+  "description": "High-performance offline-first performance companion mobile application",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Copying assets...' && mkdir -p dist && cp -r src index.html dist/",
+    "cap:sync": "cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}

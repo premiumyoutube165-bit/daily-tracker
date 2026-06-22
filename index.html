@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Performance Companion</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/components.css">
+  <!-- Android Web App configuration for native feel -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+  <div id="app-shell">
+    
+    <!-- Top Glassmorphic Navigation Header -->
+    <header style="background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border-bottom: 1px solid var(--glass-border); padding: 16px; position: sticky; top: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between;">
+      <h1 style="font-size: 1.25rem; font-weight: 800; background: linear-gradient(135deg, #fff 30%, var(--text-secondary) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+        PERFORMANCE COMPANION
+      </h1>
+      <div id="app-connection-status" class="badge badge-success">Offline Ready</div>
+    </header>
+
+    <!-- Main View Area (scrollable) -->
+    <main id="main-content">
+      
+      <!-- Sessions Module Container -->
+      <section id="view-sessions" class="view-container active"></section>
+
+      <!-- Checklist Module Container -->
+      <section id="view-checklist" class="view-container"></section>
+
+      <!-- Calculators Module Container -->
+      <section id="view-calculators" class="view-container"></section>
+
+      <!-- Reports Module Container -->
+      <section id="view-reports" class="view-container"></section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      
+      <a class="nav-item active" id="nav-sessions" data-view="sessions">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+          <polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span>Sessions</span>
+      </a>
+
+      <a class="nav-item" id="nav-checklist" data-view="checklist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span>Checklist</span>
+      </a>
+
+      <a class="nav-item" id="nav-calculators" data-view="calculators">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="9" x2="20" y2="9"/>
+          <line x1="4" y1="15" x2="20" y2="15"/>
+          <line x1="10" y1="3" x2="8" y2="21"/>
+          <line x1="16" y1="3" x2="14" y2="21"/>
+        </svg>
+        <span>Parameters</span>
+      </a>
+
+      <a class="nav-item" id="nav-reports" data-view="reports">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"/>
+          <line x1="12" y1="20" x2="12" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="14"/>
+        </svg>
+        <span>Diagnostics</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "appId": "com.performancecompanion.app",
+  "appName": "Performance Companion",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
