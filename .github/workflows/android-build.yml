@@ -26,19 +26,14 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-   - name: Install Dependencies
-        run: npm install
+      - name: Install Dependencies
+        run: npm ci || npm install
 
       - name: Build Web Application
         run: npm run build
 
       - name: Add Capacitor Android Platform
         run: npx cap add android
-
-      - name: Generate Android App Icons (Camouflage Logo)
-        run: |
-          npm install -D @capacitor/assets
-          npx capacitor-assets generate --android --icon
 
       - name: Sync Web Assets to Android
         run: npx cap sync android
